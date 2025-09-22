@@ -43,11 +43,6 @@ var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
 
-// if (app.Environment.IsDevelopment())
-// {
-//     // app.UseDeveloperExceptionPage(); // Comentado para usar nuestro middleware personalizado
-// }
-
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200", "https://localhost:4200", "https://localhost:4201"));
 
 
