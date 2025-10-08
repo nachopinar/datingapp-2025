@@ -10,6 +10,11 @@
     </div>
 
     <h3 class="text-lg font-semibold text-primary">About {{member.displayName}}</h3>
-    <div>{{member.lastActive}}</div>
+    @if (memberService.editMode()) {
+        <div>Profile goes from here</div>
+    } @else {
+        <div>{{member.description}}</div>
+    }
+    
 
 }
