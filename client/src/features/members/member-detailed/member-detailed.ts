@@ -5,10 +5,11 @@ import { AsyncPipe } from '@angular/common';
 import { filter, Observable } from 'rxjs';
 import { Member } from '../../../types/member';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { AgePipe } from '../../../core/pipes/age-pipe';
 
 @Component({
   selector: 'app-member-detailed',
-  imports: [AsyncPipe, RouterLink, RouterLinkActive, RouterOutlet],
+  imports: [AsyncPipe, RouterLink, RouterLinkActive, RouterOutlet, AgePipe],
   templateUrl: './member-detailed.html',
   styleUrl: './member-detailed.css',
 })
